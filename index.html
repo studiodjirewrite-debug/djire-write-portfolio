@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="theme-color" content="#FAFAF8">
+
+<title>Djire Write | Rédaction web & assistanat virtuel à Abidjan</title>
+<meta name="description" content="Djire Write accompagne indépendants et petites entreprises avec des textes web clairs et un assistanat virtuel fiable, à Abidjan et à distance.">
+<meta name="author" content="Djire">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://djire-write.netlify.app/">
+
+<!-- Open Graph — remplacez djire-write.netlify.app par votre adresse Netlify finale -->
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Djire Write">
+<meta property="og:title" content="Djire Write | Rédaction web & assistanat virtuel à Abidjan">
+<meta property="og:description" content="Des textes clairs et un assistanat virtuel fiable pour les indépendants et petites entreprises.">
+<meta property="og:url" content="https://djire-write.netlify.app/">
+
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Djire Write | Rédaction web & assistanat virtuel à Abidjan">
+<meta name="twitter:description" content="Rédaction web et assistanat virtuel par Djire, à Abidjan et à distance.">
+
+<!-- Données structurées pour Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://djire-write.netlify.app/#person",
+      "name": "Djire",
+      "url": "https://djire-write.netlify.app/",
+      "jobTitle": "Rédacteur web et assistant virtuel",
+      "description": "Djire est rédacteur web freelance et assistant virtuel. Il aide les indépendants et petites entreprises avec des contenus clairs et une organisation fiable.",
+      "email": "mailto:studio.djirewrite@gmail.com",
+      "telephone": "+2250140306997",
+      "worksFor": { "@id": "https://djire-write.netlify.app/#business" },
+      "knowsAbout": ["Rédaction web", "Assistanat virtuel", "Articles de blog", "Gestion d'agenda"],
+      "areaServed": [
+        { "@type": "Country", "name": "Côte d'Ivoire" },
+        { "@type": "City", "name": "Abidjan" }
+      ]
+    },
+    {
+      "@type": ["ProfessionalService", "Organization"],
+      "@id": "https://djire-write.netlify.app/#business",
+      "name": "Djire Write",
+      "url": "https://djire-write.netlify.app/",
+      "description": "Service de rédaction web et d'assistanat virtuel.",
+      "email": "mailto:studio.djirewrite@gmail.com",
+      "telephone": "+2250140306997",
+      "founder": { "@id": "https://djire-write.netlify.app/#person" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "studio.djirewrite@gmail.com",
+        "telephone": "+2250140306997",
+        "availableLanguage": ["fr"]
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Côte d'Ivoire" },
+        { "@type": "Place", "name": "À distance" }
+      ],
+      "sameAs": ["https://wa.me/225140306997"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://djire-write.netlify.app/#website",
+      "url": "https://djire-write.netlify.app/",
+      "name": "Djire Write",
+      "description": "Portfolio de Djire, rédacteur web et assistant virtuel.",
+      "publisher": { "@id": "https://djire-write.netlify.app/#person" },
+      "inLanguage": "fr-FR"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FAFAF8;
+    --bg-soft: #EDEEE9;
+    --ink: #1B2430;
+    --ink-soft: #4A5560;
+    --accent: #2F6F62;
+    --accent-soft: #E4ECE9;
+    --line: #D8D8D2;
+    --max: 720px;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    line-height:1.15;
+    margin:0;
+  }
+
+  a{color:inherit;}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* Header */
+  header{
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .logo{
+    font-family:'Newsreader', serif;
+    font-size:20px;
+    font-weight:600;
+    text-decoration:none;
+  }
+  nav{display:flex; align-items:center; gap:28px;}
+  nav a{
+    text-decoration:none;
+    font-size:15px;
+    color:var(--ink-soft);
+    display:none;
+  }
+  .nav-cta{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff !important;
+    padding:9px 18px;
+    border-radius:3px;
+    text-decoration:none;
+    font-size:14px;
+    white-space:nowrap;
+  }
+
+  @media(min-width:640px){
+    nav a{display:inline;}
+  }
+
+  /* Hero */
+  .hero{
+    padding:80px 0 64px;
+    opacity:0;
+    transform:translateY(8px);
+    animation:rise 0.7s ease forwards;
+  }
+  @keyframes rise{ to{opacity:1; transform:translateY(0);} }
+
+  .hero h1{
+    font-size:clamp(32px, 5vw, 44px);
+    max-width:14ch;
+    color:var(--ink);
+  }
+  .hero p.lede{
+    margin-top:20px;
+    max-width:46ch;
+    color:var(--ink-soft);
+    font-size:18px;
+  }
+  .tags{
+    margin-top:28px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .tag{
+    border:1px solid var(--line);
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+
+  /* Sections */
+  section{padding:56px 0;}
+  section.alt{background:var(--bg-soft);}
+  .section-head{margin-bottom:36px;}
+  .section-head h2{font-size:26px;}
+  .section-head p{color:var(--ink-soft); margin-top:10px; max-width:52ch;}
+
+  /* Services */
+  .services{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  @media(min-width:640px){
+    .services{grid-template-columns:1fr 1fr;}
+  }
+  .service{
+    padding:28px 0;
+    border-top:1px solid var(--line);
+  }
+  @media(min-width:640px){
+    .service{padding:0 32px;}
+    .service + .service{border-top:none; border-left:1px solid var(--line);}
+  }
+  .service h3{font-size:20px; margin-bottom:12px;}
+  .service ul{
+    margin:16px 0 0;
+    padding:0;
+    list-style:none;
+  }
+  .service li{
+    padding:8px 0;
+    border-top:1px solid var(--line);
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+
+  /* Process */
+  .steps{
+    display:grid;
+    gap:24px;
+  }
+  @media(min-width:640px){
+    .steps{grid-template-columns:repeat(3,1fr);}
+  }
+  .step{
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .step .num{
+    font-family:'Newsreader', serif;
+    color:var(--accent);
+    font-size:15px;
+    display:block;
+    margin-bottom:10px;
+  }
+  .step h3{font-size:17px; font-weight:600; font-family:'Work Sans', sans-serif;}
+  .step p{color:var(--ink-soft); font-size:15px; margin-top:8px;}
+
+  /* About */
+  .about-grid{
+    display:grid;
+    gap:28px;
+  }
+  @media(min-width:640px){
+    .about-grid{grid-template-columns:160px 1fr; align-items:start;}
+  }
+  .about-photo{
+    width:140px;
+    height:140px;
+    border-radius:4px;
+    object-fit:cover;
+    object-position:top;
+  }
+  .about p{color:var(--ink-soft); max-width:56ch;}
+  .about p + p{margin-top:14px;}
+
+  /* Contact */
+  .contact-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:28px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 22px;
+    border-radius:3px;
+    text-decoration:none;
+    font-size:15px;
+  }
+  .btn-primary{background:var(--accent); color:#fff;}
+  .btn-secondary{border:1px solid var(--line); color:var(--ink);}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:28px 0;
+    color:var(--ink-soft);
+    font-size:14px;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .hero{animation:none; opacity:1; transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo">Djire.write</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="https://wa.me/225140306997" class="nav-cta">Écrire sur WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Des textes clairs et un temps que vous retrouvez.</h1>
+    <p class="lede">J'aide les indépendants et petites entreprises à écrire pour le web et à garder leur organisation sous contrôle, pendant que vous vous occupez du reste.</p>
+    <div class="tags">
+      <span class="tag">Rédaction web</span>
+      <span class="tag">Assistanat virtuel</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Deux façons de travailler ensemble</h2>
+      <p>Chaque prestation est pensée pour être simple à démarrer, sans jargon ni engagement compliqué.</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <h3>Rédaction web</h3>
+        <p style="color:var(--ink-soft); font-size:15px;">Des textes pensés pour être lus jusqu'au bout et pour donner envie d'agir.</p>
+        <ul>
+          <li>Articles de blog et pages web</li>
+          <li>Fiches produits et descriptions</li>
+          <li>Contenus pour réseaux sociaux</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>Assistanat virtuel</h3>
+        <p style="color:var(--ink-soft); font-size:15px;">Les tâches du quotidien prises en charge, pour que vous gardiez le temps pour l'essentiel.</p>
+        <ul>
+          <li>Gestion d'emails et d'agenda</li>
+          <li>Saisie et organisation de données</li>
+          <li>Suivi de tâches administratives</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Comment ça marche</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h3>Vous m'écrivez</h3>
+        <p>Un message sur WhatsApp ou par email pour décrire ce dont vous avez besoin.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h3>On cadre ensemble</h3>
+        <p>Je reviens avec quelques questions pour bien comprendre l'objectif et le ton voulu.</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h3>Je livre</h3>
+        <p>Vous recevez un travail prêt à l'emploi, avec une reprise possible si besoin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos" class="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>À propos</h2>
+    </div>
+    <div class="about-grid">
+      <img class="about-photo" src="assets/djire.png" alt="Photo de Djire">
+      <div>
+        <p>Je m'appelle Djire, basé à Abidjan. J'écris et j'organise, deux choses que je fais naturellement bien, et j'ai décidé d'en faire un métier.</p>
+        <p>Je travaille avec des indépendants et petites structures qui préfèrent déléguer la rédaction ou les tâches répétitives plutôt que d'y passer leur temps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Parlons de votre projet</h2>
+      <p>Décrivez-moi ce dont vous avez besoin, je réponds rapidement.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="https://wa.me/225140306997">Écrire sur WhatsApp</a>
+      <a class="btn btn-secondary" href="mailto:studio.djirewrite@gmail.com">studio.djirewrite@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Djire.write</span>
+    <span>Abidjan, Côte d'Ivoire</span>
+  </div>
+</footer>
+
+</body>
+</html>
